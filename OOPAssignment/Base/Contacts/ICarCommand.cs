@@ -8,8 +8,8 @@ namespace OOPAssignment
 {
     public interface ICarCommand
     {
-        void TurnLeft();
-        void TurnRight();
-        void Move();
+        public void TurnLeft();
+        public void TurnRight();
+        public void Move();
     }
 }

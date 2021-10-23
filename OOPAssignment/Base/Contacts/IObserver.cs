@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPAssignment
 {
-    public interface IObserver<T>
+    public interface IObserver<T> where T : class
     {
         void Update(T provider);
         List<T> GetObservables();
