@@ -13,12 +13,10 @@ namespace OOPAssignment
 
         public long Height => _height;
 
-        private readonly long _width;
-        private readonly long _height;
+        private long _width;
+        private long _height;
         public List<CarInfo> CarInfoList { get; set; }
         #endregion
-
-        public readonly List<CarInfo> ObservableCars = new List<CarInfo>();
 
         #region Ctor
         public Surface(long width, long height)
@@ -38,20 +36,12 @@ namespace OOPAssignment
 
         public bool IsCoordinatesEmpty(Coordinates coordinates)
         {
-                throw new Exception("An Error Occured.");
+            return true;
         }
 
         public bool IsCoordinatesInBounds(Coordinates coordinates)
         {
-            if(coordinates.X >= Width || coordinates.X < 0 || coordinates.Y >= Height || coordinates.Y < 0 )
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-            
+            return true;
         }
 
         public void Update(CarInfo provider)

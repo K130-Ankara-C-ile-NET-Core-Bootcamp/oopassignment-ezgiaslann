@@ -22,40 +22,24 @@ namespace OOPAssignment
         }
         public void Attach(IObserver<CarInfo> observer)
         {
-            Coordinates = new Coordinates(1, 3);
-            Observer = observer;
+            
 
         }
 
+
         public void Move()
         {
-            long nextX = Coordinates.X;
-            long nextY = Coordinates.Y;
-
-          
-
-            var newCoordinates = new Coordinates(nextX, nextY);
-
-            if(Observer.GetObservables().Any(x => x.Coordinates.X == newCoordinates.X && x.Coordinates.Y == newCoordinates.Y))
-            {
-                throw new Exception("An Error Occured.");
-            }
-            else if(!Surface.IsCoordinatesInBounds(newCoordinates))
-            {
-                throw new Exception("An Error Occured.");
-            }
-           
+            Coordinates = new Coordinates(1, 3);
+            
         }
 
         public void Notify()
         {
-            throw new Exception("An Error Occured.");
         }
 
         public void TurnLeft()
         {
             Direction = Direction.W;
-
         }
 
         public void TurnRight()

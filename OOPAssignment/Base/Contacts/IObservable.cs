@@ -8,7 +8,7 @@ namespace OOPAssignment
 {
     public interface IObservable<T> where T:class
     {
-        public void Attach(IObserver<T> observer);
-        public void Notify();
+        void Attach(IObserver<T> observer);
+        void Notify();
     }
 }
